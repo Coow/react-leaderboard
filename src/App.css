@@ -1,8 +1,20 @@
 .App {
-  text-align: center;
+    text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+    font-family: nevis
+}
+
+#user-dropdown {
+    color: #edf2f7;
+}
+
+#user-dropdown::after {
+    content: none;
+}
+
+#user-dropdown:hover {
+    text-decoration: none; 
+    color: #718096;
 }

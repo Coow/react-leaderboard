@@ -16,7 +16,6 @@ import Footer from './Components/Footer';
 
 //Pages
 import Home from './Pages/Home'
-import Login from './Pages/Login'
 import Callback from './Pages/Callback'
 
 

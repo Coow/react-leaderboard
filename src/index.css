@@ -1,5 +1,16 @@
 @tailwind base;
-
 @tailwind components;
-
 @tailwind utilities;
+@font-face {
+    font-family: 'nevis';
+    src: local('nevis'), url('./fonts/nevis.ttf') format('truetype');
+}
+
+.borderer {
+    border: 1px solid red;
+}
+
+body {
+    margin: 0;
+    font-family: nevis, sans-serif
+}
