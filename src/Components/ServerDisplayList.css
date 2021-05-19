@@ -1,0 +1,9 @@
+.server-card{
+    transform: scale(1.0);
+    transition: transform 0.2s;
+    max-height: 220px;
+}
+
+.server-card:hover{
+    transform: scale(1.1);
+}

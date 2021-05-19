@@ -3,7 +3,10 @@
 }
 
 body {
-    font-family: nevis
+    font-family: nevis;
+    background-color: #181a1b;
+    height: 100vh;
+    overflow-x: hidden;
 }
 
 #user-dropdown {
@@ -15,6 +18,118 @@ body {
 }
 
 #user-dropdown:hover {
-    text-decoration: none; 
+    text-decoration: none;
     color: #718096;
+}
+
+/*
+Custom CSS for the remote link in the header, so that it looks correct with the other Nav.Links
+*/
+
+.remote-header-link {
+    display: block;
+    padding: .5rem 1rem;
+    color: rgba(237, 242, 247, 1);
+    cursor: pointer;
+    font-size: 16px;
+    line-height: 24px;
+}
+
+.svg-triangle path {
+    stroke-width: 20;
+    stroke: black;
+    stroke-linejoin: round;
+    stroke-linecap: round;
+}
+
+.svg-art{
+    z-index: -2;
+}
+
+.CHALLENGER {
+    background-color: #F4C874A0;
+    border-top: 10px solid #3FBFDDA0;
+}
+
+.GRANDMASTER {
+    background-color: #756572A0;
+    border-top: 10px solid #CD4545A0;
+}
+
+.MASTER {
+    background-color: #A5584EA0;
+    border-top: 10px solid #9D48E0A0;
+}
+
+.DIAMOND {
+    background-color: #576BCEA0;
+    border-top: 10px solid #576BCEA0;
+}
+
+.PLATINUM {
+    background-color: #4E9996A0;
+    border-top: 10px solid #4E9996A0;
+}
+
+.GOLD {
+    background-color: #CD8837A0;
+    border-top: 10px solid #CD8837A0;
+}
+
+.SILVER {
+    background-color: #80989DA0;
+    border-top: 10px solid #80989DA0;
+}
+
+.BRONZE {
+    background-color: #8C523AA0;
+    border-top: 10px solid #8C523AA0;
+}
+
+.IRON {
+    background-color: #574d4fA0;
+    border-top: 10px solid #574d4fA0;
+}
+
+.UNRANKED {
+    background-color: #574d4fA0;
+    border-top: 10px solid #574d4fA0;
+}
+
+@media only screen and (max-width:1180px) {
+    .resultTable {
+        width: 80%;
+        margin: auto;
+    }
+}
+
+@media only screen and (min-width:1181px) {
+    .resultTable {
+        margin: auto;
+    }
+}
+
+table {
+    border: none;
+    color: white;
+}
+
+td {
+    vertical-align: middle;
+    text-align: center;
+    color: white;
+}
+
+th {
+    text-align: center;
+    color: white;
+}
+
+.mdb-dataTables_paginate {
+    display: none;
+}
+
+.emblem {
+    width: auto;
+    height: 3rem;
 }

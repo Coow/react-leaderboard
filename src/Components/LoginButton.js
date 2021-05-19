@@ -1,7 +1,6 @@
-import React, { useState, useEffect } from 'react'
 import { useSelector, useDispatch } from 'react-redux';
 
-import { signIn, user, userGuilds, userMe } from '../Actions'
+import { signIn, user, userGuilds, userGuildsArray, userMe, expiresAt } from '../Actions'
 
 import { DiscordLoginButton } from "react-social-login-buttons";
 import OAuth2Login from 'react-simple-oauth2-login';
@@ -13,6 +12,12 @@ export default function LoginButton(props) {
 
     const onSuccess = response => {
         dispatch(user(response));
+
+        //Calculate when the token will expire
+        let expire_date = new Date();
+        expire_date.setDate(expire_date.getDate() + 7);
+        dispatch(expiresAt(expire_date));
+
         dispatch(signIn());
         console.log("User logged in");
         //window.location.reload();

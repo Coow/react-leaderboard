@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg viewBox="-50 0 550 500" xmlns="http://www.w3.org/2000/svg">
+
+
+
+    <!-- Hills -->
+    <circle fill="#007F00" cx="20" cy="520" r="120"/>
+    <circle fill="#008F00" cx="180" cy="520" r="100"/>
+    <circle fill="#009F00" cx="320" cy="540" r="100"/>
+    <circle fill="#00AF00" cx="450" cy="520" r="60"/>
+    
+    <!-- House -->
+    <rect x="436" y="440" width="28" height="24" rx="2" style="fill: black;"/>
+    <!-- Roof -->
+    <path d="M 450,430 435,443 465,443 z" style="stroke-width: 5; stroke: brown; stroke-linejoin: round; stroke-linecap:round; fill: brown"/>
+
+    <!-- Windows -->
+    <rect x="440" y="448" width="3" height="3" rx="1" style="fill: yellow;"/>
+    <rect x="444" y="448" width="3" height="3" rx="1" style="fill: yellow;"/>
+    <rect x="440" y="452" width="3" height="3" rx="1" style="fill: yellow;"/>
+    <rect x="444" y="452" width="3" height="3" rx="1" style="fill: yellow;"/>
+
+    <!-- Door -->
+    <rect x="452" y="452" width="6" height="12" rx="1" style="fill: white;"/>
+
+    <!-- Stars -->
+    <circle fill="#FFFFFF" cx="296" cy="221" r="0.56"/>
+    <circle fill="#FFFFFF" cx="88" cy="225" r="0.51"/>
+    <circle fill="#FFFFFF" cx="347" cy="285" r="0.52"/>
+    <circle fill="#FFFFFF" cx="316" cy="313" r="0.53"/>
+    <circle fill="#FFFFFF" cx="306" cy="343" r="0.54"/>
+    <circle fill="#FFFFFF" cx="-4" cy="228" r="0.56"/>
+    <circle fill="#FFFFFF" cx="-16" cy="254" r="0.52"/>
+    <circle fill="#FFFFFF" cx="45" cy="304" r="0.55"/>
+    <circle fill="#FFFFFF" cx="248" cy="332" r="0.55"/>
+    <circle fill="#FFFFFF" cx="357" cy="357" r="0.53"/>
+    <circle fill="#FFFFFF" cx="303" cy="320" r="0.52"/>
+    <circle fill="#FFFFFF" cx="117" cy="297" r="0.5"/>
+    <circle fill="#FFFFFF" cx="242" cy="264" r="0.55"/>
+    <circle fill="#FFFFFF" cx="191" cy="266" r="0.598"/>
+    <circle fill="#FFFFFF" cx="411" cy="252" r="0.53"/>
+    <circle fill="#FFFFFF" cx="-24" cy="253" r="0.56"/>
+    <circle fill="#FFFFFF" cx="332" cy="373" r="0.56"/>
+    <circle fill="#FFFFFF" cx="46" cy="330" r="0.547"/>
+    <circle fill="#FFFFFF" cx="156" cy="327" r="0.547"/>
+    <circle fill="#FFFFFF" cx="274" cy="265" r="0.55"/>
+    <circle fill="#FFFFFF" cx="46" cy="396" r="0.50"/>
+    <circle fill="#FFFFFF" cx="142" cy="269" r="0.54"/>
+    <circle fill="#FFFFFF" cx="417" cy="391" r="0.56"/>
+    <circle fill="#FFFFFF" cx="490" cy="261" r="0.5145"/>
+    <circle fill="#FFFFFF" cx="69" cy="362" r="0.52"/>
+    <circle fill="#FFFFFF" cx="420" cy="351" r="0.53"/>
+    <circle fill="#FFFFFF" cx="-3" cy="299" r="0.57"/>
+    <circle fill="#FFFFFF" cx="204" cy="383" r="0.5"/>
+    <circle fill="#FFFFFF" cx="-39" cy="378" r="0.5"/>
+    <circle fill="#FFFFFF" cx="242" cy="280" r="0.5"/>
+    <circle fill="#FFFFFF" cx="353" cy="385" r="0.5"/>
+    <circle fill="#FFFFFF" cx="-7" cy="260" r="0.5"/>
+    <circle fill="#FFFFFF" cx="429" cy="235" r="0.5"/>
+    <circle fill="#FFFFFF" cx="348" cy="340" r="0.5"/>
+    <circle fill="#FFFFFF" cx="144" cy="320" r="0.5"/>
+    <circle fill="#FFFFFF" cx="425" cy="299" r="0.5"/>
+    <circle fill="#FFFFFF" cx="73" cy="215" r="0.5"/>
+    <circle fill="#FFFFFF" cx="167" cy="326" r="0.5"/>
+    <circle fill="#FFFFFF" cx="421" cy="268" r="0.5"/>
+    <circle fill="#FFFFFF" cx="81" cy="230" r="0.5"/>
+    <circle fill="#FFFFFF" cx="10" cy="260" r="0.5"/>
+    <circle fill="#FFFFFF" cx="0" cy="252" r="0.5"/>
+    <circle fill="#FFFFFF" cx="46" cy="303" r="0.5"/>
+    <circle fill="#FFFFFF" cx="290" cy="231" r="0.5"/>
+</svg>

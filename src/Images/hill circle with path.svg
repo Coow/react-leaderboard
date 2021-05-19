@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg">
+  <g style="" transform="matrix(1, 0, 0, 1, 6.416132, 22.914759)">
+    <circle fill="#007F00" cx="18.909" cy="484.945" r="120"/>
+    <circle fill="#008F00" cx="178.909" cy="484.945" r="100"/>
+    <circle fill="#009F00" cx="318.909" cy="504.945" r="100"/>
+    <circle fill="#00AF00" cx="448.909" cy="484.945" r="60"/>
+    <rect x="434.909" y="404.945" width="28" height="24" rx="2" style="fill: black;"/>
+    <path d="M 448.909 394.945 L 433.909 407.945 L 463.909 407.945 Z" style="stroke-width: 5; stroke: brown; stroke-linejoin: round; stroke-linecap:round; fill: brown"/>
+    <rect x="438.909" y="412.945" width="3" height="3" rx="1" style="fill: white;"/>
+    <rect x="442.909" y="412.945" width="3" height="3" rx="1" style="fill: white;"/>
+    <rect x="438.909" y="416.945" width="3" height="3" rx="1" style="fill: white;"/>
+    <rect x="442.909" y="416.945" width="3" height="3" rx="1" style="fill: white;"/>
+    <rect x="450.909" y="416.945" width="6" height="12" rx="1" style="fill: white;"/>
+  </g>
+  <path style="paint-order: fill; stroke: rgb(0, 0, 0); stroke-miterlimit: 20; fill: rgba(0, 0, 0, 0);" d="M -66.454 422.547 C 15.272 352.687 91.454 397.778 120.073 428.506 C 180.36 377.529 254.425 417.825 266.269 443.63 C 321.215 399.953 388.018 431.951 408.799 464.252 C 434.064 470.774 462.286 467.806 460.586 447.295"/>
+  <path style="paint-order: fill; stroke: rgb(0, 0, 0); stroke-miterlimit: 20; fill: rgba(0, 0, 0, 0);"/>
+</svg>
