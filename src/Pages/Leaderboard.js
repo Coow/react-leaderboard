@@ -1,7 +1,10 @@
 import React, { Component, useEffect, useState } from 'react'
 import { useParams } from "react-router-dom";
-import LeaderboardLine from "../Components/LeaderboardLine"
 import { MDBDataTableV5 as MDBDataTable  } from 'mdbreact';
+import LeaderboardSelector from "../Components/LeaderboardSelector"
+import LeaderboardTable from "../Components/LeaderboardTable"
+
+//Emblems
 import Emblem_UNRANKED from "../Images/LeagueRanks/Emblem_Unranked.png"
 import Emblem_BRONZE from "../Images/LeagueRanks/Emblem_Bronze.png"
 import Emblem_SILVER from "../Images/LeagueRanks/Emblem_Silver.png"
@@ -19,6 +22,49 @@ export default function () {
 	const DIVLIST = [
 		"CHALLENGER", "GRANDMASTER", "MASTER", "DIAMOND", "PLATINUM", "GOLD", "SILVER", "BRONZE", "IRON", "UNRANKED"
 	]
+
+	const COLUMNS = [
+		{
+			label: "#",
+			field: "placement"
+		},
+		{
+			label: "",
+			field: "emblem"
+		},
+		{
+			label: "Name",
+			field: "name"
+		},
+		{
+			label: "Rank",
+			field: "ranking"
+		},
+		{
+			label: "LP",
+			field: "lp"
+		},
+		{
+			label: "Wins",
+			field: "wins"
+		},
+		{
+			label: "Losses",
+			field: "losses"
+		},
+		{
+			label: "Win Rate",
+			field: "winratio"
+		},
+		{
+			label: "",
+			field: "opgg"
+		},
+		{
+			label: "Promos",
+			field: "miniSeries",
+		}
+	];
 
 	let { guildID, board } = useParams();
 
@@ -77,9 +123,13 @@ export default function () {
                     field: "winratio"
                 },
 				{
+					label: "",
+					field: "opgg"
+				},
+				{
                     label: "Promos",
-                    field: "miniSeries"
-                }
+                    field: "miniSeries",
+                },
 			],
 			rows: []
 		}
@@ -179,20 +229,30 @@ export default function () {
 		}
 	}
 
+	useEffect(() => {
+		SetRowClass()
+	}, [tableData])
+
 	function SetRowClass(){
 		//TODO add a class to the table row, for some dank custom css 
+		
 	}
 
 	return (
 		<div className="text-white">
+			<LeaderboardSelector
+				currentBoard={board}
+			/>
+			<LeaderboardTable
+				columns={COLUMNS}
+				/>
 			<MDBDataTable
             className="w-3/5 place-self-center text-white resultTable pb-32"
             order={['placement']}
-            hover
             paging={false}
             info={false}
             sortable={false}
-			striped
+			
             small
             searching={false}
             data={tableData} />
