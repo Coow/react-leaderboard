@@ -50,6 +50,9 @@ export default function () {
                 logoutUser();
             }
         }
+        if(!userStateMe) {
+            logoutUser();
+        }
     }, [])
 
     return (

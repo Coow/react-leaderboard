@@ -1,30 +1,37 @@
-export default function(props) {
-    let headers = []
-    let dataRows = []
+import React from "react";
+import PropTypes from 'prop-types';
 
-    props.columns.forEach(column => {
-        headers.push(
-            <th key={column.field}>{column.label}</th>
+export default class LeaderboardTable extends React.Component {
+    
+  
+
+    render() {
+        let headers = []
+        let dataRows = []
+    
+        this.props.columns.forEach(column => {
+            headers.push(
+                <th key={column.field}>{column.label}</th>
+            )
+        });
+
+        return (
+            <>
+                <thead>
+                    <tr>{headers}</tr>
+                </thead>
+            </>
         )
-    });
+    }
+}
 
-    //props.data.forEach(item => {
-    //    let dataCells = []
-//
-    //    columns.forEach(column => {
-    //      <td key={`${item[key]}-${col.property}`}>{item[col.property]}</td>
-    //    })
-//
-    //    dataRows.push(
-    //        
-    //    )
-    //})
+LeaderboardTable.defaultProps = {
+    columns: [],
+    rows: []
+}
 
-    return (
-        <>
-            <thead>
-                <tr>{headers}</tr>
-            </thead>
-        </>
-    )
+LeaderboardTable.propTypes = {
+    columns: PropTypes.array,
+    rows: PropTypes.array,
+
 }

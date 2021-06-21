@@ -1,0 +1,84 @@
+/*
+    You might ask yourself.. Why is this one FAQ section in pure CSS...
+    Well.. Im too lazy to make something, so I found a template that did almost this. 
+    But it was so much custom CSS that I did a lazy and copy pasted most of it.
+    Maybe ill turn most of this into TailwindCSS sometime. Maybe when someone noticeses this "easter egg"
+
+    It looks good tho?! :D
+
+    Thanks juliocodes!
+*/
+
+.faq-section {
+    width: 80rem;
+    margin: 0 auto;
+}
+
+.question{
+    background-color: #283042;
+    border-radius: .4rem;
+    margin-bottom: 1rem;
+    padding: 1rem;
+    box-shadow: .5rem 2px .5rem rgba(0,0,0,.1);
+}
+
+.question-link{
+    font-size: 1.6rem;
+    color: rgba(255,255,255,.8);
+    text-decoration: none;
+    background-color: #283042;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 0;
+}
+
+.icon{
+    color: #e7d5ff;
+}
+
+.question-link .minus{
+    display: none;
+}
+
+.answer{
+    max-height: 0rem;
+    overflow: hidden;
+    position: relative;
+    background-color: #212838;
+    transition: max-height 650ms;
+}
+
+.answer::before{
+    content: "";
+    position: absolute;
+    width: .6rem;
+    height: 100%;
+    background-color: #8fc460;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+}
+
+.answer p{
+    color: rgba(255,255,255,.6);
+    font-size: 1.4rem;
+    padding: 2rem;
+}
+
+.question:target .answer{
+    max-height: 40rem;
+}
+
+.question:target .question-link .plus{
+    display: none;
+}
+
+.question:target .question-link .minus{
+    display: block;
+}
+
+code {
+    background-color: black;
+}

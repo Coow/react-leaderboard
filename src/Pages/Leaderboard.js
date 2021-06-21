@@ -244,7 +244,7 @@ export default function () {
 				currentBoard={board}
 			/>
 			<LeaderboardTable
-				columns={COLUMNS}
+				//columns={COLUMNS}
 				/>
 			<MDBDataTable
             className="w-3/5 place-self-center text-white resultTable pb-32"
