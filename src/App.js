@@ -27,7 +27,7 @@ function App() {
 
     return (
         
-        <BrowserRouter>
+        <BrowserRouter basename={process.env.PUBLIC_URL}>
             <React.Fragment>
                 <Header />
                 <main role='main' className="content flex-shrink-0">

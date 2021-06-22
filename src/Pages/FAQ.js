@@ -6,7 +6,7 @@ import { FaMinus, FaPlus } from 'react-icons/fa'
 
 export default function () {
     return (
-        <div className="text-white faq-section">
+        <div className="text-white faq-section mt-4">
             <QnA
                 qID="q1"
                 question="How do I add myself to a Leaderboard?"
