@@ -1,6 +1,6 @@
 import React, { Component, useEffect, useState } from 'react'
 import { useParams } from "react-router-dom";
-import { MDBDataTableV5 as MDBDataTable  } from 'mdbreact';
+import { MDBDataTableV5 as MDBDataTable } from 'mdbreact';
 import LeaderboardSelector from "../Components/LeaderboardSelector"
 import LeaderboardTable from "../Components/LeaderboardTable"
 
@@ -70,7 +70,9 @@ export default function () {
 
 	const [leaderboardJSON, set_leaderboardJSON] = useState([]);
 	const [leaderboard, set_leaderboard] = useState([]);
-    const [tableData, set_tableData] = useState({});
+	const [tableData, set_tableData] = useState({});
+
+	const [tableDataRows, set_tableDataRows] = useState({});
 
 
 	useEffect(() => {
@@ -83,61 +85,61 @@ export default function () {
 	}, [])
 
 	useEffect(() => {
-		if(!leaderboardJSON){return;}
+		if (!leaderboardJSON) { return; }
 		LeaderboardConstructor()
 	}, [leaderboardJSON])
 
 	function LeaderboardConstructor() {
 		let _table = {
 			columns: [
-                {
-                    label: "#",
-                    field: "placement"
-                },
-                {
-                    label: "",
-                    field: "emblem"
-                },
 				{
-                    label: "Name",
-                    field: "name"
-                },
+					label: "#",
+					field: "placement"
+				},
 				{
-                    label: "Rank",
-                    field: "ranking"
-                },
+					label: "",
+					field: "emblem"
+				},
 				{
-                    label: "LP",
-                    field: "lp"
-                },
+					label: "Name",
+					field: "name"
+				},
 				{
-                    label: "Wins",
-                    field: "wins"
-                },
+					label: "Rank",
+					field: "ranking"
+				},
 				{
-                    label: "Losses",
-                    field: "losses"
-                },
+					label: "LP",
+					field: "lp"
+				},
 				{
-                    label: "Win Rate",
-                    field: "winratio"
-                },
+					label: "Wins",
+					field: "wins"
+				},
+				{
+					label: "Losses",
+					field: "losses"
+				},
+				{
+					label: "Win Rate",
+					field: "winratio"
+				},
 				{
 					label: "",
 					field: "opgg"
 				},
 				{
-                    label: "Promos",
-                    field: "miniSeries",
-                },
+					label: "Promos",
+					field: "miniSeries",
+				},
 			],
 			rows: []
 		}
 
-		for(let i = 0; i < leaderboardJSON.length; i++) {
+		for (let i = 0; i < leaderboardJSON.length; i++) {
 			_table.rows.push({
 				placement: i + 1,
-				emblem: <img className="emblem" src={EmblemSelector(leaderboardJSON[i].tier)}/>,
+				emblem: <img className="emblem" src={EmblemSelector(leaderboardJSON[i].tier)} />,
 				name: leaderboardJSON[i].name,
 				ranking: (pascalCase(leaderboardJSON[i].tier) + " " + leaderboardJSON[i].ranking),
 				lp: leaderboardJSON[i].lp,
@@ -147,8 +149,9 @@ export default function () {
 				miniSeries: PromoEmojis(leaderboardJSON[i].miniSeries),
 			})
 		}
-		
-		console.log(_table)
+
+		console.log(_table.rows)
+		set_tableDataRows(_table.rows)
 		set_tableData(_table)
 	}
 
@@ -164,7 +167,7 @@ export default function () {
 		let winPercentage = (winRatio * 100);
 		let winPercentageInt = Math.round(winPercentage);
 
-		if(!winPercentageInt){
+		if (!winPercentageInt) {
 			return "";
 		}
 
@@ -204,8 +207,8 @@ export default function () {
 		return sorted;
 	}
 
-	function EmblemSelector(ranking){
-		switch(ranking) {
+	function EmblemSelector(ranking) {
+		switch (ranking) {
 			case 'UNRANKED':
 				return Emblem_UNRANKED
 			case 'BRONZE':
@@ -233,9 +236,9 @@ export default function () {
 		SetRowClass()
 	}, [tableData])
 
-	function SetRowClass(){
+	function SetRowClass() {
 		//TODO add a class to the table row, for some dank custom css 
-		
+
 	}
 
 	return (
@@ -244,18 +247,24 @@ export default function () {
 				currentBoard={board}
 			/>
 			<LeaderboardTable
-				//columns={COLUMNS}
-				/>
+				className=""
+				columns={COLUMNS}
+				rows={leaderboardJSON}
+			/>
 			<MDBDataTable
-            className="w-3/5 place-self-center text-white resultTable pb-32"
-            order={['placement']}
-            paging={false}
-            info={false}
-            sortable={false}
-			
-            small
-            searching={false}
-            data={tableData} />
+				className="w-3/5 place-self-center text-white resultTable py-32"
+				order={['placement']}
+				paging={false}
+				info={false}
+				sortable={false}
+
+				small
+				searching={false}
+				data={tableData} />
 		</div>
 	)
 }
+
+/*
+
+*/
