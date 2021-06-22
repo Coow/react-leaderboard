@@ -15,4 +15,4 @@ steps:
     cache_from: "registry.mrcow.xyz/cow/react-leaderboard:latest"
   when:
     branch: 
-      - master
+      - main
