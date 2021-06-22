@@ -28,7 +28,8 @@ export default function LoginButton(props) {
             authorizationUrl="https://discord.com/api/oauth2/authorize"
             responseType="token"
             clientId="463493299387367438"
-            redirectUri="http://localhost:3000/callback"
+            //      redirectUri=
+            redirectUri={window.location.protocol + "//" + window.location.hostname + ":" + window.location.port + "/callback"}
             buttonText={<DiscordLoginButton className="text-3xl" iconSize={props.iconSize} size={props.size} />}
             scope="identify guilds email"
             onSuccess={onSuccess}
