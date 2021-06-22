@@ -7,8 +7,10 @@ COPY package*.json ./
 
 RUN npm install
 
-RUN npm run build
+#RUN npm run build
 
 COPY . .
 
-CMD [ "serve", "-s", "build" ]
+#CMD [ "serve", "-s", "build" ]
+
+CMD [ "npm", "start" ]
