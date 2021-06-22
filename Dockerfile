@@ -3,13 +3,15 @@ FROM node:12
 # Create app directory
 WORKDIR /usr/src/app
 
-COPY package*.json ./
+COPY . .
+
+#COPY package*.json ./
+#COPY *.config.js ./
 
 RUN npm install
 
-RUN npm run build
 
-COPY build .
+RUN npm run build
 
 RUN npm install -g serve
 
