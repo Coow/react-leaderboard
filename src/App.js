@@ -20,6 +20,7 @@ import API from './Pages/API'
 import Commands from './Pages/Commands'
 import FAQ from './Pages/FAQ'
 import Premium from './Pages/Premium'
+import Todo from './Pages/Todo'
 
 
 function App() {
@@ -36,6 +37,7 @@ function App() {
                     <Route path="/commands" component={Commands} />
                     <Route path="/FAQ" component={FAQ} />
                     <Route path="/api" component={API} />
+                    <Route path="/todo" component={Todo} />
                     <Route path="/premium" component={Premium} />
                     <Route path="/leaderboard/:guildID/:board" component={Leaderboard} />
                 </main>

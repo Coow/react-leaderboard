@@ -35,7 +35,7 @@
 }
 
 .icon{
-    color: #e7d5ff;
+    color: white;
 }
 
 .question-link .minus{
@@ -50,7 +50,7 @@
     transition: max-height 650ms;
 }
 
-.answer::before{
+.answer::after{
     content: "";
     position: absolute;
     width: .6rem;

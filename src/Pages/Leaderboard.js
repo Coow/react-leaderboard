@@ -57,13 +57,13 @@ export default function () {
 			field: "winratio"
 		},
 		{
-			label: "",
-			field: "opgg"
-		},
-		{
 			label: "Promos",
 			field: "miniSeries",
-		}
+		},
+		{
+			label: "",
+			field: "externalLink"
+		},
 	];
 
 	let { guildID, board } = useParams();
@@ -149,9 +149,6 @@ export default function () {
 				miniSeries: PromoEmojis(leaderboardJSON[i].miniSeries),
 			})
 		}
-
-		console.log(_table.rows)
-		set_tableDataRows(_table.rows)
 		set_tableData(_table)
 	}
 
@@ -242,7 +239,7 @@ export default function () {
 	}
 
 	return (
-		<div className="text-white">
+		<div className="text-white pb-8">
 			<LeaderboardSelector
 				currentBoard={board}
 			/>
@@ -251,6 +248,12 @@ export default function () {
 				columns={COLUMNS}
 				rows={leaderboardJSON}
 			/>
+
+		</div>
+	)
+}
+
+/*
 			<MDBDataTable
 				className="w-3/5 place-self-center text-white resultTable py-32"
 				order={['placement']}
@@ -261,10 +264,4 @@ export default function () {
 				small
 				searching={false}
 				data={tableData} />
-		</div>
-	)
-}
-
-/*
-
 */

@@ -70,6 +70,7 @@ export default function () {
     //Get common servers
     useEffect(() => {
         if (isLoggedIn && userState) {
+            //fetch('http://localhost:8080/riotboard/v2/guilds', {
             fetch('https://api.mrcow.xyz/riotboard/v2/guilds', {
                 method: "POST",
                 headers: {

@@ -6,7 +6,7 @@ import { FaMinus, FaPlus } from 'react-icons/fa'
 
 export default function () {
     return (
-        <div className="text-white faq-section mt-4">
+        <div className="text-white faq-section mt-4 pb-8">
             <QnA
                 qID="q1"
                 question="How do I add myself to a Leaderboard?"
@@ -20,6 +20,15 @@ export default function () {
             <QnA
                 qID="q2"
                 question="How often does the Leaderboards update?"
+                answer={<p>The Leaderboards updates roughly every 30 minutes. <br />
+                In Discord check when the message was sent, then add roughly 30 minutes. <br />
+                On the website there is countdown timer at the top of the leaderboard counting down to next estimated update.<br />
+                Premium servers can update <span className="italic">on demand!</span> by the use of the <code>&LR update &lt;board&gt;</code> in the associated Leaderboard channel</p>}
+            />
+
+            <QnA
+                qID="q8"
+                question="How do I change region?"
                 answer={<p>The Leaderboards updates roughly every 30 minutes. <br />
                 In Discord check when the message was sent, then add roughly 30 minutes. <br />
                 On the website there is countdown timer at the top of the leaderboard counting down to next estimated update.<br />
@@ -69,6 +78,12 @@ export default function () {
                 - When the Game Account was added <br /> <br />
                 If the Game Account gets removed, the data is also removed
                 </p>}
+            />
+
+            <QnA
+                qID="q7"
+                question="Why U.GG?"
+                answer={<p>Cowlandia is in no way sponsored or affiliated in anyway with U.GG. <br /> The reason it is chosen is very simple; It's the service I personally prefer and use.</p>}
             />
 
             <QnA

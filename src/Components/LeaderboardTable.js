@@ -14,6 +14,7 @@ import Emblem_MASTER from "../Images/LeagueRanks/Emblem_Master.png"
 import Emblem_GRANDMASTER from "../Images/LeagueRanks/Emblem_Grandmaster.png"
 import Emblem_CHALLENGER from "../Images/LeagueRanks/Emblem_Challenger.png"
 
+import ugg from "../Images/ugg-logo.svg"
 
 export default class LeaderboardTable extends React.Component {
 
@@ -37,15 +38,15 @@ export default class LeaderboardTable extends React.Component {
                 <td className="">{row.wins}</td>
                 <td className="">{row.losses}</td>
                 <td className="">{CalculateWinRatio(row.wins, row.losses)}</td>
-                <td></td>
                 <td className="">{PromoEmojis(row.miniSeries) + ""}</td>
+                <td className="w-20"><a href={`https://u.gg/lol/profile/euw1/${row.name}/overview`} target="_blank"><img src={ugg}/></a></td>
             </tr>
             )
-            //)
+            console.log(row)
         })
 
         return (
-            <table className="m-auto w-3/5 place-self-center">
+            <table className="m-auto w-4/6 place-self-center">
                 <thead>
                     <tr>{headers}</tr>
                 </thead>
