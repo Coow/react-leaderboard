@@ -99,7 +99,7 @@ export default function () {
                 </div>
                 :
                 <div className="mt-80 flex flex-col items-center justify-content-center">
-                    <h1 className="text-gray-200">Cowlandia - The LoL Leaderboard Bot</h1>
+                    <h1 className="text-gray-200 text-5xl">Cowlandia - The LoL Leaderboard Bot</h1>
                     <LoginButton />
                 </div>
             }
