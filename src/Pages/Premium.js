@@ -1,4 +1,4 @@
-export default function () {
+export default function Premium () {
     return (
         <h4 className="text-white w-2/5 m-auto text-center pt-32">
             Oh, you want Premium?!

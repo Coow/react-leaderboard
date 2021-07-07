@@ -1,7 +1,7 @@
 import './FAQ.css'
 import QnA from '../Components/QnA.js'
 
-export default function (props) {
+    export default function Todo (props) {
     return (
         <div className="text-white faq-section mt-4">
             <QnA

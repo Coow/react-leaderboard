@@ -1,6 +1,6 @@
-import React, { Component, useEffect, useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { useParams } from "react-router-dom";
-import { MDBDataTableV5 as MDBDataTable } from 'mdbreact';
+//import { MDBDataTableV5 as MDBDataTable } from 'mdbreact';
 import LeaderboardSelector from "../Components/LeaderboardSelector"
 import LeaderboardTable from "../Components/LeaderboardTable"
 
@@ -17,7 +17,7 @@ import Emblem_CHALLENGER from "../Images/LeagueRanks/Emblem_Challenger.png"
 
 import { pascalCase } from "pascal-case";
 
-export default function () {
+export default function Leaderboard() {
 
 	const DIVLIST = [
 		"CHALLENGER", "GRANDMASTER", "MASTER", "DIAMOND", "PLATINUM", "GOLD", "SILVER", "BRONZE", "IRON", "UNRANKED"
@@ -69,11 +69,7 @@ export default function () {
 	let { guildID, board } = useParams();
 
 	const [leaderboardJSON, set_leaderboardJSON] = useState([]);
-	const [leaderboard, set_leaderboard] = useState([]);
 	const [tableData, set_tableData] = useState({});
-
-	const [tableDataRows, set_tableDataRows] = useState({});
-
 
 	useEffect(() => {
 		if (!guildID || !board) { return; }
@@ -82,11 +78,13 @@ export default function () {
 			.then(response => {
 				set_leaderboardJSON(LeaderboardSorter(response))
 			})
+		// eslint-disable-next-line
 	}, [])
 
 	useEffect(() => {
 		if (!leaderboardJSON) { return; }
 		LeaderboardConstructor()
+		// eslint-disable-next-line
 	}, [leaderboardJSON])
 
 	function LeaderboardConstructor() {
@@ -139,7 +137,7 @@ export default function () {
 		for (let i = 0; i < leaderboardJSON.length; i++) {
 			_table.rows.push({
 				placement: i + 1,
-				emblem: <img className="emblem" src={EmblemSelector(leaderboardJSON[i].tier)} />,
+				emblem: <img className="emblem" src={EmblemSelector(leaderboardJSON[i].tier)} alt="" />,
 				name: leaderboardJSON[i].name,
 				ranking: (pascalCase(leaderboardJSON[i].tier) + " " + leaderboardJSON[i].ranking),
 				lp: leaderboardJSON[i].lp,
@@ -172,7 +170,7 @@ export default function () {
 	}
 
 	function PromoEmojis(promo) {
-		if (promo.length == 0) {
+		if (promo.length === 0) {
 			return "";
 		}
 		let emojiList = ""
@@ -196,7 +194,7 @@ export default function () {
 		let sorted = []
 		for (let i = 0; i < DIVLIST.length; i++) {
 			for (let s = 0; s < json.length; s++) {
-				if (json[s].tier == DIVLIST[i]) {
+				if (json[s].tier === DIVLIST[i]) {
 					sorted.push(json[s])
 				}
 			}
@@ -252,16 +250,3 @@ export default function () {
 		</div>
 	)
 }
-
-/*
-			<MDBDataTable
-				className="w-3/5 place-self-center text-white resultTable py-32"
-				order={['placement']}
-				paging={false}
-				info={false}
-				sortable={false}
-
-				small
-				searching={false}
-				data={tableData} />
-*/

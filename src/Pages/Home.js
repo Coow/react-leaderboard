@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from 'react'
+import React, { useEffect } from 'react'
 import { useSelector, useDispatch } from 'react-redux';
-import { signIn, user, userGuilds, userMe, userGuildsArray, userGuildsCommon } from '../Actions'
+import { userGuilds, userMe, userGuildsArray, userGuildsCommon } from '../Actions'
 
 import LoginButton from '../Components/LoginButton'
 
@@ -13,9 +13,6 @@ export default function () {
     const userState = useSelector(state => state.userReducer);
     const userStateGuilds = useSelector(state => state.userGuilds);
     const _userGuildsArray = useSelector(state => state.userGuildsArray);
-    const userStateMe = useSelector(state => state.userMe);
-
-    const [me, set_me] = useState([]);
 
     //Get the guilds that the User is in
     useEffect(() => {
@@ -85,7 +82,7 @@ export default function () {
                     let userGuildsFiltered = []
                     for(let g = 0; g < response.length; g++){
                         //If response[index] is equal to any server, push that child object 
-                        let _guild = userStateGuilds.filter(_g => response[g] == _g.id)
+                        let _guild = userStateGuilds.filter(_g => response[g] === _g.id)
                         //[0], because IDK
                         userGuildsFiltered.push(_guild[0])
                     }
